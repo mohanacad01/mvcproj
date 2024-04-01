@@ -62,22 +62,49 @@ public class HomeController : Controller
              return View("Error");
         }
     }
-    public IActionResult Register(RegisterModel rmodel){
-
-    ConnectionString();
-        conStr();
-        con.Open();
-        cmd.Connection=con;
-        cmd.CommandText="select * from tbl_login where username=@uname and password=@pass";
-        cmd.Parameters.AddWithValue("@uname", lmodel.username);
-        cmd.Parameters.AddWithValue("@pass", lmodel.password);
-
-        dr=cmd.ExecuteReader();
+  [HttpGet]
+     public IActionResult Register()
+    {
+        return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+    
+    [HttpPost]
+public IActionResult RegisterDB(RegisterModel rmodel)
+{ 
+    
+       ConnectionString();
+        con.Open();
+         com.Connection=con;
+         com.CommandText="insert into jp_reg1(First_Name,Middle_Name , Last_Name,email_id,Phn_num,DOB,Location,Qualification) values (@FirstName,@MiddleName,@LastName,@Email,@PhnNumber,@DOB, @Location,@Qualification);";
+        {
+            com.Parameters.AddWithValue("@FirstName", rmodel.FirstName); // Fixing error: 'FullName' does not exist
+            com.Parameters.AddWithValue("@MiddleName", rmodel.MiddleName); // Fixing error: 'UserName' does not exist
+            com.Parameters.AddWithValue("@LastName", rmodel.LastName);
+            com.Parameters.AddWithValue("@Email", rmodel.Email); // Fixing error: 'Email' does not exist
+            com.Parameters.AddWithValue("@PhnNumber", rmodel.PhnNumber); // Fixing error: 'ContactNumber' does not exist
+            com.Parameters.AddWithValue("@DOB", rmodel.DOB);
+            com.Parameters.AddWithValue("@Location", rmodel.Location);
+            // com.Parameters.AddWithValue("@Gender", rmodel.Gender); 
+            com.Parameters.AddWithValue("@Qualification", rmodel.Qualification); // Fixing error: 'Password' does not exist
+
+            int rowAffected = com.ExecuteNonQuery();
+            if(rowAffected > 0)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return View("Error");
+            }
+        }
     }
 }
+
+    //  [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    // public IActionResult Error();
+    // {
+    //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    // }
+
