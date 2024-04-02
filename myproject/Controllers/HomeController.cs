@@ -77,7 +77,7 @@ public IActionResult RegisterDB(RegisterModel rmodel)
        ConnectionString();
         con.Open();
          com.Connection=con;
-         com.CommandText="insert into jp_reg1(First_Name,Middle_Name , Last_Name,email_id,Phn_num,DOB,Location,Qualification) values (@FirstName,@MiddleName,@LastName,@Email,@PhnNumber,@DOB, @Location,@Qualification);";
+         com.CommandText="insert into jp_reg1(First_Name,Middle_Name , Last_Name,Email,Phn_num,DOB,Location,Qualification) values (@FirstName,@MiddleName,@LastName,@Email,@PhnNumber,@DOB, @Location,@Qualification); insert into jp_Login("Email)";
         {
             com.Parameters.AddWithValue("@FirstName", rmodel.FirstName); // Fixing error: 'FullName' does not exist
             com.Parameters.AddWithValue("@MiddleName", rmodel.MiddleName); // Fixing error: 'UserName' does not exist
@@ -88,6 +88,7 @@ public IActionResult RegisterDB(RegisterModel rmodel)
             com.Parameters.AddWithValue("@Location", rmodel.Location);
             // com.Parameters.AddWithValue("@Gender", rmodel.Gender); 
             com.Parameters.AddWithValue("@Qualification", rmodel.Qualification); // Fixing error: 'Password' does not exist
+            
 
             int rowAffected = com.ExecuteNonQuery();
             if(rowAffected > 0)

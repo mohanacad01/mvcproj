@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oVIh3pSCiZU//sJSC3Px6E5q+KySxO8CTEwl3N7lpPEQkaXt51vxEUI1hIVflULiTFT5TMVp3a1Y87XXZnSOCg==",
+  "dgSpecHash": "mGTVY2TnlSSgQO4qvLmzu/SESWokQXWtGNb7Q4xwdcO77XT2cQZ37sHljTE3ZGDtUmgP9DG6qqzQesFpLAl4MQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\myproject.csproj",
+  "projectFilePath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\myproject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohanacad01\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\mohanacad01\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

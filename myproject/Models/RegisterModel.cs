@@ -1,5 +1,8 @@
-namespace myproject.Models
-{
+
+namespace myproject.Models;
+
+
+
     public class RegisterModel
     {
         public string FirstName { get; set; } 
@@ -10,7 +13,7 @@ namespace myproject.Models
         public string DOB { get; set; } 
         public string Location { get; set; }
         public string Qualification { get; set; }
+     
         
       
     }
-}

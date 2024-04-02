@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\myproject.csproj": {}
+    "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\myproject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\myproject.csproj": {
+    "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\myproject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\myproject.csproj",
+        "projectUniqueName": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\myproject.csproj",
         "projectName": "myproject",
-        "projectPath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\myproject.csproj",
+        "projectPath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\myproject.csproj",
         "packagesPath": "C:\\Users\\mohanacad01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\csharp\\myproject\\obj\\",
+        "outputPath": "C:\\Users\\mohanacad01\\Desktop\\CADBATCH\\project\\mvcproj\\myproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mohanacad01\\AppData\\Roaming\\NuGet\\NuGet.Config"
